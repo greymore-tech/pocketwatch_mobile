@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sentia_mobile/utils/size_config.dart';
+import 'package:pocketwatch_mobile/utils/size_config.dart';
 
 class CustomListTitle extends StatelessWidget{
   

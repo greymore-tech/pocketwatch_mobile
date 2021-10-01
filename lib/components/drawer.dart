@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:expandable/expandable.dart';
+// import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:sentia_mobile/api/api.dart';
-import 'package:sentia_mobile/route/route_generator.dart';
-import 'package:sentia_mobile/utils/size_config.dart';
-import 'package:sentia_mobile/user/student/components/customlisttitle.dart';
+// import 'package:pocketwatch_mobile/api/api.dart';
+import 'package:pocketwatch_mobile/route/route_generator.dart';
+import 'package:pocketwatch_mobile/utils/size_config.dart';
+import 'package:pocketwatch_mobile/components/customlisttitle.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomDrawer extends StatefulWidget {
@@ -61,57 +61,57 @@ class _CustomDrawerState extends State<CustomDrawer> {
               )
            ),
            SizedBox(height:2.06*SizeConfig.heightMultiplier),
-           InkWell(
-             splashColor: Colors.amberAccent,
-             child: ExpandablePanel(
-               // ignore: deprecated_member_use
-               hasIcon: false,
-               header:Padding(
-                 padding: EdgeInsets.only(left:2.90*SizeConfig.heightMultiplier,right:2.98*SizeConfig.heightMultiplier),
-                 child: ListTile(
-                   contentPadding: EdgeInsets.zero,
-                   leading:Icon(Icons.description,color: Colors.white,),
-                   title:Text('Profile',style: TextStyle(fontSize: 2.3*SizeConfig.textMultiplier,fontFamily: 'Nunito',color: Colors.white),),
-                   trailing:Icon(Icons.keyboard_arrow_down,color: Colors.white)
-                 ),
-               ),
-               expanded: Column(
-                 children: <Widget>[
-                    CustomListTitle(Icons.perm_identity,'Student Profile',selected,(){
-                     Navigator.of(context).pop();
-                     Navigator.of(context).pushNamed(profileRoute);
-                   }),
-                   CustomListTitle(Icons.school,'Educational Details',selected,(){
-                     Navigator.of(context).pop();
-                     Navigator.of(context).pushNamed(eduProfileRoute);
-                   }),
-                 ],
-               ),
-             ),
-           ),
+          //  InkWell(
+          //    splashColor: Colors.amberAccent,
+          //    child: ExpandablePanel(
+          //      // ignore: deprecated_member_use
+          //      hasIcon: false,
+          //      header:Padding(
+          //        padding: EdgeInsets.only(left:2.90*SizeConfig.heightMultiplier,right:2.98*SizeConfig.heightMultiplier),
+          //        child: ListTile(
+          //          contentPadding: EdgeInsets.zero,
+          //          leading:Icon(Icons.description,color: Colors.white,),
+          //          title:Text('Profile',style: TextStyle(fontSize: 2.3*SizeConfig.textMultiplier,fontFamily: 'Nunito',color: Colors.white),),
+          //          trailing:Icon(Icons.keyboard_arrow_down,color: Colors.white)
+          //        ),
+          //      ),
+          //      expanded: Column(
+          //        children: <Widget>[
+          //           CustomListTitle(Icons.perm_identity,'Student Profile',selected,(){
+          //            Navigator.of(context).pop();
+          //           //  Navigator.of(context).pushNamed(profileRoute);
+          //          }),
+          //          CustomListTitle(Icons.school,'Educational Details',selected,(){
+          //            Navigator.of(context).pop();
+          //           //  Navigator.of(context).pushNamed(eduProfileRoute);
+          //          }),
+          //        ],
+          //      ),
+          //    ),
+          //  ),
            SizedBox(height:2.06*SizeConfig.heightMultiplier),
            CustomListTitle(Icons.library_books,'Courses',selected,(){
              setState(() {
                selected =true;
              });
              Navigator.of(context).pop();
-             Navigator.of(context).pushNamed(courseMenuRoute);
+            //  Navigator.of(context).pushNamed(courseMenuRoute);
             
            }),
            SizedBox(height:2.06*SizeConfig.heightMultiplier),
            CustomListTitle(Icons.enhanced_encryption,'Enrolled Courses',selected,(){
              Navigator.of(context).pop();
-             Navigator.of(context).pushNamed(myCourseMenuRoute);
+            //  Navigator.of(context).pushNamed(myCourseMenuRoute);
            }),
            SizedBox(height:2.06*SizeConfig.heightMultiplier),
            CustomListTitle(Icons.date_range,'Exam Schedule',selected,(){
              Navigator.of(context).pop();
-             Navigator.of(context).pushNamed(examScheduleRoute);
+            //  Navigator.of(context).pushNamed(examScheduleRoute);
            }),
            SizedBox(height:2.06*SizeConfig.heightMultiplier),
            CustomListTitle(Icons.settings,'Settings',selected,(){
              Navigator.of(context).pop();
-             Navigator.of(context).pushNamed(settingsRoute);
+            //  Navigator.of(context).pushNamed(settingsRoute);
            }),
           SizedBox(height:2.06*SizeConfig.heightMultiplier),
           CustomListTitle(Icons.contact_mail,'Raise Support Token',selected,(){
@@ -173,7 +173,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
   }
 
    void logout() async{
-    var res = await Api().getData('app/logout');
+     var res;
+    // var res = await Api().getData('app/logout');
     if(res.statusCode==200){
       SharedPreferences localStorage = await SharedPreferences.getInstance();
       localStorage.remove('user');
