@@ -40,7 +40,6 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Colors.grey[100],
-      resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: true,
       appBar: new AppBar(
         title: InkWell(
