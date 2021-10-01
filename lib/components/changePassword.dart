@@ -1,6 +1,6 @@
-import 'package:cad_mobile/repositories/settings_repo.dart';
+import 'package:pocketwatch_mobile/repo/settings_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:cad_mobile/utils/size_config.dart';
+import 'package:pocketwatch_mobile/utils/size_config.dart';
 
 class ChangePassword extends StatefulWidget {
   @override

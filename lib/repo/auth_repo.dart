@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:cad_mobile/models/user_model.dart';
-import 'package:cad_mobile/network_module/api_path.dart';
-import 'package:cad_mobile/network_module/http_client.dart';
-import 'package:cad_mobile/route/route_generator.dart';
+import 'package:pocketwatch_mobile/models/user_model.dart';
+import 'package:pocketwatch_mobile/network_module/api_path.dart';
+import 'package:pocketwatch_mobile/network_module/http_client.dart';
+import 'package:pocketwatch_mobile/route/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -20,8 +20,8 @@ class AuthRepo {
       // localStorage.remove('flag');
       // localStorage.remove('introDone');
       // localStorage.remove('displayShow');
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(loginRoute, (Route<dynamic> route) => false);
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(loginRoute, (Route<dynamic> route) => false);
     }
   }
 
