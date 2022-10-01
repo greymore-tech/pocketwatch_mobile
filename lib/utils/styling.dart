@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pocketwatch_mobile/utils/size_config.dart';
 
 class AppTheme {
-  // AppTheme._();
-
-  static Color appBackgroundColor = Colors.grey[50];
+  AppTheme._();
+  static Color appBackgroundColor = Colors.white;
   static Color topBarBackgroundColor = Colors.white;
   static const Color selectedTabBackgroundColor = Color(0xFFFFC442);
   static const Color unSelectedTabBackgroundColor = Color(0xFFFFFFFC);
@@ -15,7 +14,6 @@ class AppTheme {
       // brightness: Brightness.light,
       textTheme: lightTextTheme,
       buttonTheme: buttonTheme,
-      fontFamily: "Nunito",
       // primarySwatch: Colors.pink,
       canvasColor: Colors.grey[100]);
 
@@ -30,40 +28,35 @@ class AppTheme {
   static final ButtonThemeData buttonTheme = ButtonThemeData(
     // minWidth: 100,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(29),
+      borderRadius: BorderRadius.circular(5),
     ),
-    buttonColor: Colors.blue[800],
-    padding: const EdgeInsets.all(15.0),
+    buttonColor: Color.fromRGBO(0, 51, 52, 1),
+    padding: EdgeInsets.all(0.98*SizeConfig.heightMultiplier),
   );
   static final TextStyle _titleLight = TextStyle(
-      fontFamily: 'Nunito',
       fontSize: 2.5 * SizeConfig.textMultiplier,
       fontWeight: FontWeight.bold,
-      color: Colors.blueGrey[900]);
+      color: Colors.blueGrey.shade900);
 
   static final TextStyle _subHeading = TextStyle(
-    color: Colors.black87,
+    color: Colors.blueGrey.shade400,
     fontWeight: FontWeight.w800,
     fontSize: 2.2 * SizeConfig.textMultiplier,
-    fontFamily: 'Nunito',
   );
   static final TextStyle _subDisplayHeading = TextStyle(
-    color: Colors.black87,
+    color: Colors.blueGrey.shade400,
     fontSize: 2 * SizeConfig.textMultiplier,
     fontWeight: FontWeight.w600,
-    fontFamily: 'Nunito',
   );
   static final TextStyle _bodyText1 = TextStyle(
-    color: Colors.black87,
+    color: Colors.grey.shade800,
     fontSize: 1.9 * SizeConfig.textMultiplier,
-    fontWeight: FontWeight.w500,
-    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
   );
   static final TextStyle _bodyText2 = TextStyle(
-    color: Colors.black87,
+    color: Colors.grey[700],
     fontSize: 1.6 * SizeConfig.textMultiplier,
-    fontWeight: FontWeight.w500,
-    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
   );
   // static final TextStyle _subTitleLight = TextStyle(
   //   color: subTitleTextColor,
@@ -73,9 +66,8 @@ class AppTheme {
   // );
 
   static final TextStyle _buttonLight = TextStyle(
-    fontSize: 2 * SizeConfig.textMultiplier,
-    fontFamily: 'Nunito',
-    fontWeight: FontWeight.bold,
+    fontSize: 1.6 * SizeConfig.textMultiplier,
+    fontWeight: FontWeight.w500,
     color: Colors.white,
   );
 
