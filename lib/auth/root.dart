@@ -1,8 +1,8 @@
 import 'package:pocketwatch_mobile/models/current_user.dart';
 import 'package:flutter/material.dart';
-import 'package:pocketwatch_mobile/view/home.dart';
+// import 'package:pocketwatch_mobile/view/home.dart';
 
-import 'index.dart';
+// import 'index.dart';
 
 enum AuthStatus { notLoggedIn, loggedIn }
 
