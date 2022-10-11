@@ -30,7 +30,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      resizeToAvoidBottomPadding: false,
       appBar: new AppBar(
         iconTheme: new IconThemeData(color: Colors.black),
         title: InkWell(

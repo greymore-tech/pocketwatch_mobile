@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:cad_mobile/network_module/api_path.dart';
-import 'package:cad_mobile/network_module/http_client.dart';
-import 'package:cad_mobile/utils/customDialog.dart';
+import 'package:pocketwatch_mobile/network_module/api_path.dart';
+import 'package:pocketwatch_mobile/network_module/http_client.dart';
+import 'package:pocketwatch_mobile/utils/customDialog.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

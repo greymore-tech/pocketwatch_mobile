@@ -3,83 +3,96 @@ import 'package:pocketwatch_mobile/utils/size_config.dart';
 
 class AppTheme {
   AppTheme._();
-
-  static Color appBackgroundColor = Colors.grey[100];
-  static  Color topBarBackgroundColor = Colors.white;
+  static Color appBackgroundColor = Colors.white;
+  static Color topBarBackgroundColor = Colors.white;
   static const Color selectedTabBackgroundColor = Color(0xFFFFC442);
   static const Color unSelectedTabBackgroundColor = Color(0xFFFFFFFC);
   static const Color subTitleTextColor = Color(0xFF9F988F);
 
   static final ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppTheme.appBackgroundColor,
-    brightness: Brightness.light,
-    textTheme: lightTextTheme,
-  );
+      scaffoldBackgroundColor: AppTheme.appBackgroundColor,
+      // brightness: Brightness.light,
+      textTheme: lightTextTheme,
+      buttonTheme: buttonTheme,
+      // primarySwatch: Colors.pink,
+      canvasColor: Colors.grey[100]);
 
   static final TextTheme lightTextTheme = TextTheme(
-   // ignore: deprecated_member_use
-    title: _titleLight,
-    // ignore: deprecated_member_use
-    subtitle:_subTitleLight,
+    headline6: _titleLight,
+    subtitle1: _subHeading,
+    subtitle2: _subDisplayHeading,
+    bodyText1: _bodyText1,
+    bodyText2: _bodyText2,
     button: _buttonLight,
-    // ignore: deprecated_member_use
-    display1: _greetingLight,
-    // ignore: deprecated_member_use
-    display2: _searchLight,
-    // ignore: deprecated_member_use
-    body1: _selectedTabLight,
-    // ignore: deprecated_member_use
-    body2: _unSelectedTabLight,
   );
-
-
-
+  static final ButtonThemeData buttonTheme = ButtonThemeData(
+    // minWidth: 100,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5),
+    ),
+    buttonColor: Color.fromRGBO(0, 51, 52, 1),
+    padding: EdgeInsets.all(0.98*SizeConfig.heightMultiplier),
+  );
   static final TextStyle _titleLight = TextStyle(
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 3.5 * SizeConfig.textMultiplier,
-    fontWeight: FontWeight.bold,
-    color: Colors.blueGrey[900]
+      fontSize: 2.5 * SizeConfig.textMultiplier,
+      fontWeight: FontWeight.bold,
+      color: Colors.blueGrey.shade900);
+
+  static final TextStyle _subHeading = TextStyle(
+    color: Colors.blueGrey.shade400,
+    fontWeight: FontWeight.w800,
+    fontSize: 2.2 * SizeConfig.textMultiplier,
   );
-
-
-  static final TextStyle _subTitleLight = TextStyle(
-    color: subTitleTextColor,
-    fontFamily: 'IBM-Plex-sans',
+  static final TextStyle _subDisplayHeading = TextStyle(
+    color: Colors.blueGrey.shade400,
     fontSize: 2 * SizeConfig.textMultiplier,
-    height: 1.5,
+    fontWeight: FontWeight.w600,
   );
+  static final TextStyle _bodyText1 = TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 1.9 * SizeConfig.textMultiplier,
+    fontWeight: FontWeight.w600,
+  );
+  static final TextStyle _bodyText2 = TextStyle(
+    color: Colors.grey[700],
+    fontSize: 1.6 * SizeConfig.textMultiplier,
+    fontWeight: FontWeight.w600,
+  );
+  // static final TextStyle _subTitleLight = TextStyle(
+  //   color: subTitleTextColor,
+  //   fontFamily: 'Nunito',
+  //   fontSize: 2 * SizeConfig.textMultiplier,
+  //   height: 1.5,
+  // );
 
   static final TextStyle _buttonLight = TextStyle(
-    fontWeight: FontWeight.bold,
+    fontSize: 1.6 * SizeConfig.textMultiplier,
+    fontWeight: FontWeight.w500,
     color: Colors.white,
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 2 * SizeConfig.textMultiplier,
   );
 
-  static final TextStyle _greetingLight = TextStyle(
-    color: Colors.black,
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 2.0 * SizeConfig.textMultiplier,
-  );
+  // static final TextStyle _greetingLight = TextStyle(
+  //   color: Colors.black,
+  //   fontFamily: 'Nunito',
+  //   fontSize: 2.0 * SizeConfig.textMultiplier,
+  // );
 
-  static final TextStyle _searchLight = TextStyle(
-    color: Colors.black,
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 2.3 * SizeConfig.textMultiplier,
-  );
+  // static final TextStyle _searchLight = TextStyle(
+  //   color: Colors.black,
+  //   fontFamily: 'Nunito',
+  //   fontSize: 2.3 * SizeConfig.textMultiplier,
+  // );
 
-  static final TextStyle _selectedTabLight = TextStyle(
-    color: Colors.black,
-    fontWeight: FontWeight.bold,
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 2 * SizeConfig.textMultiplier,
-  );
+  // static final TextStyle _selectedTabLight = TextStyle(
+  //   color: Colors.black,
+  //   fontWeight: FontWeight.bold,
+  //   fontFamily: 'Nunito',
+  //   fontSize: 2 * SizeConfig.textMultiplier,
+  // );
 
-  static final TextStyle _unSelectedTabLight = TextStyle(
-    color: Colors.grey,
-    fontFamily: 'IBM-Plex-sans',
-    fontSize: 2 * SizeConfig.textMultiplier,
-  );
-
-
+  // static final TextStyle _unSelectedTabLight = TextStyle(
+  //   color: Colors.grey,
+  //   fontFamily: 'Nunito',
+  //   fontSize: 2 * SizeConfig.textMultiplier,
+  // );
 }
