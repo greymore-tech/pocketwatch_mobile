@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
@@ -36,32 +37,33 @@ class CustomDialog {
 
   void warningFlushbar2(BuildContext context, String msg) {
     Flushbar(
-      backgroundColor: Colors.orange[900],
+      backgroundColor: Colors.orange,
       flushbarPosition: FlushbarPosition.TOP,
       title: "Warning",
       message: msg,
       icon: Icon(
         Icons.warning,
         size: 28,
-        color: Colors.orange[200],
+        color: Colors.white,
       ),
-      leftBarIndicatorColor: Colors.orange[900],
+      leftBarIndicatorColor: Colors.orange,
       duration: Duration(seconds: 5),
     )..show(context);
   }
 
   void failedFlushbar(BuildContext context, String msg) {
     Flushbar(
-      backgroundColor: Colors.red[400],
+      backgroundColor: Colors.redAccent[400],
       flushbarPosition: FlushbarPosition.TOP,
       title: "Failed",
       message: msg,
       icon: Icon(
         Icons.error,
+
         size: 28,
-        color: Colors.redAccent[700],
+        color: Colors.white,
       ),
-      leftBarIndicatorColor: Colors.red[400],
+      leftBarIndicatorColor: Colors.redAccent[400],
       duration: Duration(seconds: 3),
     )..show(context);
   }
@@ -69,16 +71,16 @@ class CustomDialog {
   void successFlushbarE(BuildContext context, String msg) {
     Flushbar(
       messageSize: 20.0,
-      backgroundColor: Colors.green[300],
+      backgroundColor: Colors.green[800],
       flushbarPosition: FlushbarPosition.TOP,
       title: "Success",
       message: msg,
       icon: Icon(
         Icons.done,
         size: 28,
-        color: Colors.green[900],
+        color: Colors.white
       ),
-      leftBarIndicatorColor: Colors.green[300],
+      leftBarIndicatorColor: Colors.green[800],
       duration: Duration(seconds: 3),
     )..show(context);
   }
