@@ -36,6 +36,8 @@ dependencies:
   another_flushbar: any
   flutter_spinkit: any
   package_info_plus: any
+  flutter_html: any
+  flutter_svg: any
   
 dev_dependencies:
   flutter_test:

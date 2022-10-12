@@ -1,3 +1,4 @@
+import 'package:pocketwatch_mobile/auth/login.dart';
 import 'package:pocketwatch_mobile/models/current_user.dart';
 import 'package:flutter/material.dart';
 // import 'package:pocketwatch_mobile/view/home.dart';
@@ -31,13 +32,13 @@ class _RootState extends State<Root> {
 
     switch (_authStatus) {
       case AuthStatus.notLoggedIn:
-        retVal = Index();
+        retVal = Login();
         break;
       case AuthStatus.loggedIn:
-        retVal = Home();
+        // retVal = Home();
 
         break;
-      default:Index();
+      default:Login();
     }
     return retVal;
   }
